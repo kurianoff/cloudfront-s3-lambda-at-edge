@@ -53,13 +53,6 @@ resource "aws_s3_bucket_object" "errorhtml" {
   cache_control = "public, max-age=0, must-revalidate"
 }
 
-resource "aws_s3_bucket_object" "logo" {
-  bucket       = aws_s3_bucket.maintenance.bucket
-  content_type = "image/svg+xml"
-  key          = "logo-shield-text.svg"
-  source       = "./maintenance/pages/logo-shield-text.svg"
-}
-
 resource "aws_s3_bucket_object" "maintenancecss" {
   bucket       = aws_s3_bucket.maintenance.bucket
   content_type = "text/css"
